@@ -1,4 +1,4 @@
-/* Global Reset and Variables */
+/* Global Reset and Layout */
 * {
     margin: 0;
     padding: 0;
@@ -14,10 +14,10 @@ body {
     background: #07111f;
     color: #fff;
     transition: background 0.3s, color 0.3s;
-    padding-top: 70px; /* Offset for fixed navigation */
+    padding-top: 70px;
 }
 
-/* Light Theme Variables overriding colors */
+/* Light Theme Overrides */
 body.light {
     background: #f4f7fb;
     color: #111;
@@ -29,7 +29,6 @@ body.light nav {
 
 body.light .card, 
 body.light .item, 
-body.light .flow-step, 
 body.light .project-card, 
 body.light .contact-card,
 body.light .counterWrap div {
@@ -38,11 +37,11 @@ body.light .counterWrap div {
     color: #111;
 }
 
-body.light footer, body.light nav {
+body.light footer {
     background: #e2e8f0;
 }
 
-/* Preloader styles */
+/* Preloader Screen */
 #loader {
     position: fixed;
     inset: 0;
@@ -101,12 +100,11 @@ nav ul li a:hover {
     border: none;
     font-size: 20px;
     cursor: pointer;
-    padding: 5px;
 }
 
-/* Hero & Counters Section */
+/* Hero Section */
 .hero {
-    min-height: 80vh;
+    min-height: 65vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,19 +115,20 @@ nav ul li a:hover {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 44px;
     margin-bottom: 10px;
 }
 
 h2 {
     color: #38bdf8;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 28px;
+    position: relative;
 }
 
 .tagline {
-    font-size: 18px;
-    opacity: 0.9;
+    font-size: 20px;
+    color: #38bdf8;
     margin-bottom: 30px;
 }
 
@@ -140,13 +139,12 @@ h2 {
     flex-wrap: wrap;
     width: 100%;
     max-width: 1000px;
-    margin-top: 20px;
 }
 
-.counterWrap div, .card, .item, .flow-step, .project-card, .contact-card {
+.counterWrap div, .card, .item, .project-card, .contact-card {
     background: #ffffff10;
     border: 1px solid #ffffff20;
-    padding: 20px;
+    padding: 24px;
     border-radius: 14px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -157,65 +155,67 @@ h2 {
     color: #38bdf8;
 }
 
-/* Section Configurations */
 section {
     padding: 80px 8%;
-    border-bottom: 1px solid #ffffff05;
 }
 
-.grid, .cards-grid, .contact-grid {
+.grid, .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 30px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #38bdf8;
 }
 
 /* Timeline Layout */
 .line {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     margin-top: 30px;
 }
 
 .item span {
-    display: block;
-    font-size: 22px;
+    display: inline-block;
+    font-size: 14px;
     font-weight: bold;
+    background: #2563eb;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    margin-bottom: 5px;
+}
+
+.item h4 {
     color: #38bdf8;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
-/* Smart Factory Flowchart Horizontal Chain styling */
-.flow {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.flow-step {
-    text-align: center;
-    font-weight: bold;
-    background: #1e293b;
-}
-
-/* Portfolio Filters and Project Cards */
+/* Project Cards Visual Redesign */
 .filters {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .filters button {
     margin: 5px;
-    padding: 10px 20px;
+    padding: 10px 22px;
     border: none;
     background: #1e293b;
     color: #fff;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 30px;
     font-weight: 500;
-    transition: background 0.2s;
+    transition: all 0.2s;
 }
 
 body.light .filters button {
@@ -228,67 +228,57 @@ body.light .filters button {
     color: white;
 }
 
-/* Gallery Segment */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
-.gallery-item {
-    text-align: center;
+.project-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-.gallery img {
+.project-card img {
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 1px solid #ffffff20;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ffffff10;
 }
 
-.caption, .tip-text {
-    margin-top: 8px;
+body.light .project-card img {
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.project-info p {
     font-size: 14px;
-    opacity: 0.7;
-}
-
-.tip-text {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Global button action items */
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #2563eb;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    margin-top: 20px;
-    font-weight: 600;
-    transition: background 0.2s;
-}
-
-.btn:hover {
-    background: #1d4ed8;
+    line-height: 1.5;
+    opacity: 0.9;
 }
 
 .contact-card a {
     color: #38bdf8;
     text-decoration: none;
-    word-break: break-all;
 }
 
-/* Layout Hover Transforms */
-.card:hover, .item:hover, .flow-step:hover, .project-card:hover, .contact-card:hover {
+/* Interactive Hover States */
+.card:hover, .item:hover, .project-card:hover, .contact-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* Footer layout */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -296,16 +286,9 @@ footer {
     border-top: 1px solid #ffffff10;
 }
 
-footer small {
-    opacity: 0.5;
-    margin-top: 5px;
-    display: block;
-}
-
-/* Mobile Media Queries Optimization */
+/* Responsive Scaling */
 @media (max-width: 768px) {
     h1 { font-size: 32px; }
-    h2 { font-size: 24px; }
     nav {
         flex-direction: column;
         gap: 10px;
