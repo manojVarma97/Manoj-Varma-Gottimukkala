@@ -3,130 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MV Automation | Controls & Automation Engineer Portfolio</title>
+    <title>Manoj Varma Gottimukkala | Controls & Automation Engineer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Preloader Screen -->
     <div id="loader">Loading Portfolio...</div>
 
+    <!-- Navigation Bar -->
     <nav>
         <div class="logo">MV Automation</div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#tech">Technologies</a></li>
-            <li><a href="#journey">Journey</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <button id="themeBtn" aria-label="Toggle Theme">🌙</button>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero">
-        <h1>Manoj Varma Gottumukkala</h1>
-        <h2>Controls & Automation Engineer</h2>
-        <p class="tagline">Designing Intelligent Machines. Building Smart Manufacturing Solutions.</p>
+        <h1>Manoj Varma Gottimukkala</h1>
+        <h2>Control & Automation Engineer</h2>
+        <p class="tagline">Siemens PLC | Robotics | Industrial IoT</p>
         
+        <!-- Live Animated Counters -->
         <div class="counterWrap">
             <div><span class="count" data-target="30">0</span><p>Automation Projects</p></div>
             <div><span class="count" data-target="3">0</span><p>Years Experience</p></div>
             <div><span class="count" data-target="5">0</span><p>Automation Technologies</p></div>
-            <div><span class="count" data-target="3">0</span><p>Manufacturing Processes</p></div>
+            <div><span class="count" data-target="4">0</span><p>Core Project Sectors</p></div>
         </div>
     </header>
 
+    <!-- About / Professional Summary Section -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>I specialize in PLC programming, CNC automation, robotics integration, machine vision, leak testing, ultrasonic inspection, Node‑RED, SQL, and Industry 4.0 solutions. Over the last three years, I have successfully delivered more than 30 automation projects.</p>
+        <h2>Professional Summary</h2>
+        <p>Automation Engineer with 3+ years of experience in PLC programming, machine commissioning, robotics integration, industrial networking, and Special Purpose Machine (SPM) development. Deeply experienced in Siemens, Delta, Mitsubishi PLCs, Yaskawa robotics, Python, SQL Server, MQTT, and Node-RED to build scalable Industry 4.0 solutions.</p>
     </section>
 
-    <section id="tech">
-        <h2>Core Technologies</h2>
+    <!-- Core Skills Section -->
+    <section id="skills">
+        <h2>Core Skills</h2>
         <div class="grid">
-            <div class="card"><strong>PLC Automation</strong><br>Siemens • Mitsubishi • Delta</div>
-            <div class="card"><strong>CNC Automation</strong><br>FANUC CNC & PMC</div>
-            <div class="card"><strong>Robotics</strong><br>Yaskawa Integration</div>
-            <div class="card"><strong>Industry 4.0</strong><br>Node‑RED • SQL • Python</div>
+            <div class="card">
+                <h3>PLC & Automation</h3>
+                <p>Siemens S7-1200/1500, Delta PLC, Mitsubishi PLC, HMI Development, Servo Systems, VFD Integration</p>
+            </div>
+            <div class="card">
+                <h3>Robotics</h3>
+                <p>Yaskawa Robot Integration, Safety Interlocks, Multi-Axis Systems</p>
+            </div>
+            <div class="card">
+                <h3>Industrial Communication</h3>
+                <p>Profinet, Modbus TCP/IP, OPC UA, MQTT</p>
+            </div>
+            <div class="card">
+                <h3>Software & Digitalization</h3>
+                <p>Python, SQL Server, Node-RED, Data Logging, Dashboards</p>
+            </div>
         </div>
     </section>
 
-    <section id="journey" class="timeline">
-        <h2>Engineering Journey</h2>
+    <!-- Experience Section -->
+    <section id="experience" class="timeline">
+        <h2>Professional Experience</h2>
         <div class="line">
-            <div class="item"><span>2023</span><p>Started Controls Engineering</p></div>
-            <div class="item"><span>2024</span><p>30+ Automation Projects Delivered</p></div>
-            <div class="item"><span>2025</span><p>Industry 4.0, Node-RED & SQL Integrations</p></div>
-            <div class="item"><span>Future</span><p>Global Smart Factory Engineer</p></div>
+            <div class="item">
+                <span>Dec 2023 - Present</span>
+                <h3>Control Engineer</h3>
+                <h4>Thayne Automation Pvt Ltd</h4>
+                <p>Designed and commissioned automation systems using Siemens, Delta, and Mitsubishi PLCs. Developed machine control sequences for SPMs. Integrated servo systems, welding controllers, sensors, and process equipment. Executed FAT, SAT, installation, and commissioning. Developed Python-based DAQ systems, SQL integrations, and Node-RED monitoring dashboards.</p>
+            </div>
+            <div class="item">
+                <span>Jun 2023 - Dec 2023</span>
+                <h3>Control Engineer Intern</h3>
+                <h4>Thayne Automation Pvt Ltd</h4>
+                <p>Assisted with PLC programming, HMI development, wiring validation, IO testing, and commissioning support.</p>
+            </div>
         </div>
     </section>
 
-    <section id="architecture">
-        <h2>Smart Factory Architecture</h2>
-        <div class="flow">
-            <div class="flow-step">PLC</div>
-            <div class="flow-step">Industrial Ethernet</div>
-            <div class="flow-step">Node-RED</div>
-            <div class="flow-step">SQL</div>
-            <div class="flow-step">Dashboard</div>
-            <div class="flow-step">Cloud</div>
-        </div>
-    </section>
-
+    <!-- Project Gallery Showcase Section -->
     <section id="projects">
-        <h2>Machine Gallery & Projects</h2>
+        <h2>Project Experience</h2>
         
+        <!-- Filter Controls -->
         <div class="filters">
             <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="plc">PLC</button>
-            <button class="filter-btn" data-filter="cnc">CNC</button>
-            <button class="filter-btn" data-filter="robot">Robot</button>
-            <button class="filter-btn" data-filter="vision">Vision</button>
+            <button class="filter-btn" data-filter="plc">PLC & IIoT</button>
+            <button class="filter-btn" data-filter="robot">Robotics</button>
+            <button class="filter-btn" data-filter="welding">Welding Systems</button>
         </div>
 
-        <div class="cards-grid">
-            <div class="project-card text-card" data-category="plc">
-                <h3>RTD Sensor Assembly</h3>
-                <p>PLC Automation & Testing</p>
-            </div>
-            <div class="project-card text-card" data-category="cnc">
-                <h3>Double Head Turning</h3>
-                <p>CNC Systems Integration</p>
-            </div>
-            <div class="project-card text-card" data-category="robot">
-                <h3>Robot Welding</h3>
-                <p>Yaskawa Robot Configuration</p>
-            </div>
-            <div class="project-card text-card" data-category="vision">
-                <h3>Leak & Vision Testing</h3>
-                <p>Quality Inspections & Testing Systems</p>
-            </div>
-        </div>
-
+        <!-- Project Cards & Images Grid -->
         <div class="gallery">
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200?text=RTD+Machine+Image" alt="RTD Machine Image">
-                <p class="caption">RTD Machine Placeholder</p>
+            <div class="project-card" data-category="plc">
+                <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=600&q=80" alt="RTD Sensor Assembly Machine">
+                <div class="project-info">
+                    <h3>RTD Sensor Assembly & Testing Machine</h3>
+                    <p>Developed machine automation logic, SQL data logging, and interactive Node-RED monitoring dashboards.</p>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200?text=Turning+Machine" alt="Turning Machine">
-                <p class="caption">Turning Machine Placeholder</p>
+            
+            <div class="project-card" data-category="robot">
+                <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=600&q=80" alt="Robotic Assembly Line">
+                <div class="project-info">
+                    <h3>Pole Clamp Robotic Assembly & TIG Welding Line</h3>
+                    <p>Integrated Yaskawa robotic arms, established fieldbus communications, and engineered dynamic safety interlock logic.</p>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200?text=Robot+Welding" alt="Robot Welding">
-                <p class="caption">Robot Welding Placeholder</p>
+
+            <div class="project-card" data-category="plc">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Industrial Commissioning">
+                <div class="project-info">
+                    <h3>Nuclear Fuel Complex (NFC) Projects</h3>
+                    <p>Supported mission-critical machine commissioning, rigorous process validation, system troubleshooting, and cycle-time optimization.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="welding">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80" alt="Spot Welding Machine">
+                <div class="project-info">
+                    <h3>MCB Spot Welding Machines</h3>
+                    <p>Developed complex recipe-based machine control programs supporting flexible changeovers for multiple product variants.</p>
+                </div>
             </div>
         </div>
-        <p class="tip-text">Replace placeholders with your real industrial machine photos inside an assets directory.</p>
     </section>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <p>Add your latest ATS resume PDF into your project folder and link it directly below.</p>
-        <a class="btn" href="#" target="_blank">Download Resume</a>
-    </section>
-
+    <!-- Contact Details Section -->
     <section id="contact">
-        <h2>Contact</h2>
+        <h2>Contact & Profiles</h2>
         <div class="contact-grid">
             <div class="contact-card">
                 <strong>Email</strong><br>
@@ -134,18 +145,19 @@
             </div>
             <div class="contact-card">
                 <strong>LinkedIn</strong><br>
-                <a href="https://linkedin.com/in/manojvarmagottimukkala" target="_blank">linkedin.com/in/manojvarmagottimukkala</a>
+                <a href="https://www.linkedin.com/in/manojvarmagottimukkala" target="_blank">linkedin.com/in/manojvarmagottimukkala</a>
             </div>
             <div class="contact-card">
                 <strong>GitHub</strong><br>
                 <a href="https://github.com/manojVarma97" target="_blank">github.com/manojVarma97</a>
             </div>
         </div>
+        <p style="text-align: center; margin-top: 30px; opacity: 0.7;">📍 Bengaluru, Karnataka, India</p>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© MV Automation Portfolio • Built for Smart Factory Engineering</p>
-        <small>Deployable via GitHub Pages</small>
+        <p>© Manoj Varma Gottimukkala | Control & Automation Portfolio</p>
     </footer>
 
     <script src="script.js"></script>
